@@ -1,0 +1,29 @@
+CREATE TABLE Usuario (
+    ID INT PRIMARY KEY
+);
+
+CREATE TABLE Imagem (
+    ID INT PRIMARY KEY,
+    Caminho VARCHAR(255),
+    UsuarioID INT,
+    FOREIGN KEY (UsuarioID) REFERENCES Usuario(ID)
+);
+
+CREATE TABLE Filtro (
+    ID INT PRIMARY KEY,
+    Nome VARCHAR(255)
+);
+
+CREATE TABLE Operacao (
+    ID INT PRIMARY KEY,
+    Nome VARCHAR(255)
+);
+
+CREATE TABLE Processamento (
+    ID INT PRIMARY KEY,
+    ImagemID INT,
+    Tipo ENUM('Filtro', 'Operacao'),
+    TipoID INT,
+    FOREIGN KEY (ImagemID) REFERENCES Imagem(ID),
+    FOREIGN KEY (TipoID) REFERENCES Filtro(ID) OR REFERENCES Operacao(ID)
+);

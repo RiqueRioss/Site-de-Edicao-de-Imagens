@@ -1,0 +1,30 @@
+Entidades
+
+Usuario:
+ID (PK): 
+
+Imagem:
+ID (PK):
+Caminho: 
+UsuarioID (FK): 
+
+Filtro:
+ID (PK): 
+Nome: 
+
+Operacao:
+ID (PK): 
+Nome: 
+
+Processamento:
+ID (PK): 
+ImagemID (FK): 
+Tipo:
+TipoID (FK): 
+DataProcessamento: 
+
+
+Usuario (1) ----- (N) Imagem
+Imagem (1) ----- (N) Processamento
+Filtro (1) ----- (N) Processamento
+Operacao (1) ----- (N) Processamento
