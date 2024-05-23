@@ -1,5 +1,7 @@
 CREATE TABLE Usuario (
     ID INT PRIMARY KEY
+    Email VARCHAR(255) NOT NULL,
+    Senha VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Imagem (
@@ -12,6 +14,20 @@ CREATE TABLE Imagem (
 CREATE TABLE Filtro (
     ID INT PRIMARY KEY,
     Nome VARCHAR(255)
+);
+
+CREATE TABLE MarcaDagua (
+    ID INT PRIMARY KEY,
+    Texto VARCHAR(255),
+    Posicao VARCHAR(50)L
+);
+
+CREATE TABLE TextoIdentificado (
+    ID INT PRIMARY KEY,
+    ImagemID INT,
+    Texto VARCHAR(255),
+    DataIdentificacao DATE ,
+    FOREIGN KEY (ImagemID) REFERENCES Imagem(ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Operacao (
