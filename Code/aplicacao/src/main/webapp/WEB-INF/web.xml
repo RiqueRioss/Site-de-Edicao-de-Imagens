@@ -16,23 +16,13 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>OCRProject</display-name>
-    <servlet-name>OCRProject</servlet-name>
-    <servlet-class>servlets.OCRProject</servlet-class>
+    <display-name>OCRServlet</display-name>
+    <servlet-name>OCRServlet</servlet-name>
+    <servlet-class>servlets.OCRServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>OCRProject</servlet-name>
-    <url-pattern>/OCRProject</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>TesteAjax</display-name>
-    <servlet-name>TesteAjax</servlet-name>
-    <servlet-class>servlets.TesteAjax</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>TesteAjax</servlet-name>
-    <url-pattern>/TesteAjax</url-pattern>
+    <servlet-name>OCRServlet</servlet-name>
+    <url-pattern>/OCRServlet</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -53,5 +43,25 @@
   <servlet-mapping>
     <servlet-name>MarcaServlet</servlet-name>
     <url-pattern>/MarcaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TamanhoServlet</display-name>
+    <servlet-name>TamanhoServlet</servlet-name>
+    <servlet-class>servlets.TamanhoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TamanhoServlet</servlet-name>
+    <url-pattern>/TamanhoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FiltroServlet</display-name>
+    <servlet-name>FiltroServlet</servlet-name>
+    <servlet-class>servlets.FiltroServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FiltroServlet</servlet-name>
+    <url-pattern>/FiltroServlet</url-pattern>
   </servlet-mapping>
 </web-app>

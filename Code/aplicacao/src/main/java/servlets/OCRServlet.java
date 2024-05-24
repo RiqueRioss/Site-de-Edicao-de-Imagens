@@ -14,8 +14,14 @@ import jakarta.servlet.http.Part;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Collections;
 
 import funcoes.Edicao;
 
@@ -40,8 +46,28 @@ public class OCRServlet extends HttpServlet {
         Edicao.mudarCinza(imageFile);
 
         ITesseract instance = new Tesseract();
-        // instance.setDatapath("/path/to/tessdata"); // Defina o caminho para tessdata se necessário
-        instance.setLanguage("eng"); // Defina o idioma, se necessário
+
+        // Obtendo o caminho absoluto para o diretório tessdata dentro de resources
+        URI uri = null;
+		try {
+			uri = OCRServlet.class.getClassLoader().getResource("tessdata").toURI();
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        Path tessDataPath;
+        if (uri.getScheme().equals("jar")) {
+            try (FileSystem fileSystem = FileSystems.newFileSystem(uri, Collections.emptyMap())) {
+                tessDataPath = fileSystem.getPath("/tessdata");
+            }
+        } else {
+            tessDataPath = Paths.get(uri);
+        }
+
+        instance.setDatapath(tessDataPath.toString());
+
+        // Definindo o idioma para 'por' (Português)
+        instance.setLanguage("eng");
 
         String result;
         try {

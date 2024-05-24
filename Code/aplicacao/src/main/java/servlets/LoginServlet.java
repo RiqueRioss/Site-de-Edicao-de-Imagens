@@ -61,7 +61,7 @@ public class LoginServlet extends HttpServlet {
 			
 			// True se o usuário for encontrado com o comando select
 			if (rSet.next()) {
-				RequestDispatcher rDispatcher = request.getRequestDispatcher("index.jsp");
+				RequestDispatcher rDispatcher = request.getRequestDispatcher("Menu.jsp");
 				rDispatcher.forward(request, response);
 			}
 			else {
