@@ -64,4 +64,14 @@
     <servlet-name>FiltroServlet</servlet-name>
     <url-pattern>/FiltroServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegistrarServlet</display-name>
+    <servlet-name>RegistrarServlet</servlet-name>
+    <servlet-class>servlets.RegistrarServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrarServlet</servlet-name>
+    <url-pattern>/RegistrarServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -23,5 +23,6 @@
 		</tr>
 	</table>
 	</form>
+	<p>Novo aqui? <a href="Registrar.jsp">Registre-se</a></p>
 </body>
 </html>
