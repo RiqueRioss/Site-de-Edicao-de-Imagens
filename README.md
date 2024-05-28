@@ -1,8 +1,10 @@
 # Site de Edição de Imagens
-
 Projeto Multidisciplinar
 
-Por: Henrique Rios (RiqueRioss) e Luan Alberto (luanalberto3)
+## Contribuidores 
+Henrique Rios (RiqueRioss)
+
+Luan Alberto (luanalberto3)
 
 Aplicação web com função de oferecer funções de edição de imagem e detecção de texto. A aplicação está hospedada nos servidores da AWS e possui um sistema de login com banco de dados, o usuário pode escolher a função desejada, na página de edição, e requerir o resultado.
 
@@ -10,21 +12,24 @@ Aplicação web com função de oferecer funções de edição de imagem e detec
 
 Esse projeto foi feito como atividade curricular para as disciplinas Análise e Projeto de Sistemas e Processamento de Imagens com intuito de mostrar as habilidades em criação de aplicações e conhecimento em manipulação de imagens.
 Como parte da disciplina Análise e Projeto de Sistemas a aplicação contém:
-    - Lista Requisitos Funcionais e Não Funcionais.
-    - História de Usuários.
-    - Critérios de Aceite.
-    - Cenários de Uso.
-    - Diagrama Físico, Sql e ER.
-    - Diagrama de Casos de Uso.
-    - Diagrama de Componentes e Instalação.
-    - Prototipagem de tela (Feito com Figma).
-    - Regras de Negócio.
+
+* Lista Requisitos Funcionais e Não Funcionais.
+* História de Usuários.
+* Critérios de Aceite.
+* Cenários de Uso.
+* Diagrama Físico, Sql e ER.
+* Diagrama de Casos de Uso.
+* Diagrama de Componentes e Instalação.
+* Prototipagem de tela (Feito com Figma).
+* Regras de Negócio.
+	
 Como parte da disciplina Processamento de Imagens:
-    - Função de identicação de texto em imagens, usando o Tesseract e seu banco de dados.
-    - Filtros de alteração de imagem.
-    - Alterar tamanho de imagens.
-    - Aplicar uma marca-d'água em uma imagem.
-A linguagem de programação dos servidores é 100% java e o projeto usa o modelo Maven para facilitar o uso de repositórios externos. A IDE usada
+
+* Função de identicação de texto em imagens, usando o Tesseract e seu banco de dados.
+* Filtros de alteração de imagem.
+* Alterar tamanho de imagens.
+* Aplicar uma marca-d'água em uma imagem.
+* A linguagem de programação dos servidores é 100% java e o projeto usa o modelo Maven para facilitar o uso de repositórios externos. A IDE usada
 
 ## Instalação
 
