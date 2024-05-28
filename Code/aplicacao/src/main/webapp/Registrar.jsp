@@ -12,5 +12,6 @@
         <input type="password" id="txtSenha" name="txtSenha" required><br><br>
         <button type="submit">Registrar</button>
     </form>
+    <p>Possui uma conta? <a href="Registrar.jsp">Faça o Login</a></p>
 </body>
 </html>

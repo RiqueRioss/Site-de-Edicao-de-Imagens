@@ -16,19 +16,29 @@ public class Edicao {
     }
 	
 	public static int[] obterVizinhanca(BufferedImage imagemEntrada, int w, int h, int tamanho) {
-        int[] vizinhanca = new int[tamanho*tamanho];
-        int count = 0;
-        int metade = tamanho/2;
+	    int[] vizinhanca = new int[tamanho * tamanho];
+	    int count = 0;
+	    int metade = tamanho / 2;
 
-        for (int i = metade*-1; i <= metade; i++){
-            for (int j = metade*-1; j <= metade; j++){
-                Color cor = new Color(imagemEntrada.getRGB(w + j, h + i));
-                int valorPixel = cor.getRed();
-                vizinhanca[count++] = valorPixel;
-            }
-        }
-        return vizinhanca;
-    }
+	    for (int i = -metade; i <= metade; i++) {
+	        for (int j = -metade; j <= metade; j++) {
+	            int x = w + j;
+	            int y = h + i;
+	            // Check if the coordinates are within the image bounds
+	            if (x >= 0 && x < imagemEntrada.getWidth() && y >= 0 && y < imagemEntrada.getHeight()) {
+	                Color cor = new Color(imagemEntrada.getRGB(x, y));
+	                int valorPixel = cor.getRed();
+	                vizinhanca[count] = valorPixel;
+	            } else {
+	                // Handle out-of-bounds case, e.g., assign a default value or a special marker
+	                vizinhanca[count] = 0; // or any other value that makes sense in your context
+	            }
+	            count++;
+	        }
+	    }
+	    return vizinhanca;
+	}
+
 	
 	private static boolean verificaPixelBordas(int h, int w, int height, int width, int tamanho) {
         int metade = tamanho/2;
