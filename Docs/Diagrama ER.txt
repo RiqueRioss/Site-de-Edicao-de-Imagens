@@ -18,14 +18,6 @@ Operacao:
 ID (PK): 
 Nome: 
 
-MarcaDagua:
-ID (PK):
-Texto:
-
-TextoIdentificado:
-ID (PK):
-Texto:
-
 Processamento:
 ID (PK): 
 ImagemID (FK): 
@@ -38,5 +30,3 @@ Usuario (1) ----- (N) Imagem
 Imagem (1) ----- (N) Processamento
 Filtro (1) ----- (N) Processamento
 Operacao (1) ----- (N) Processamento
-MarcaDagua (1) ----- (N) Processamento
-TextoIdentificado (1) ----- (N) Processamento
